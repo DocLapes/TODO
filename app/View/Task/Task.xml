@@ -1,0 +1,27 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <StackLayout>
+        <StackLayout class="shape-outer-header">
+            <FlexboxLayout class="header shape-inner-header">
+                <Button class="Tasks current" text="Квесты" />
+                <Button class="TaskEdit" text="Квест" tap="{{editTask}}" />
+            </FlexboxLayout>
+        </StackLayout>
+
+        <StackLayout class="shape-outer-main">
+            <FlexboxLayout class="main shape-inner-main">
+                <FlexboxLayout class="control-panel">
+                    <Button text="⊕" tap="{{ createNewTask }}" />
+                    <Button text="□" tap="{{ watchUncompletedTasks }}"/>
+                    <Button text="✓" tap="{{ watchCompletedTasks }}"/>
+                </FlexboxLayout>
+                <StackLayout class="tasks" height="90%">
+                    <ListView height="100%" items="{{tasks}}" itemTap="{{ editTask }}" separatorColor="transparent">
+                        <ListView.itemTemplate>
+                            <Label text="{{ title }}" />
+                        </ListView.itemTemplate>
+                    </ListView>
+                </StackLayout>
+            </FlexboxLayout>
+        </StackLayout>
+    </StackLayout>
+</Page>

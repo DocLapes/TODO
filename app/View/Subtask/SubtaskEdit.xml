@@ -1,0 +1,23 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" unloaded="onUnloaded">
+    <StackLayout>
+        <StackLayout class="shape-outer-header">
+            <FlexboxLayout class="header shape-inner-header">
+                <Button class="Tasks" text="Квесты" tap="{{ navigateToTasksList }}" />
+                <Button class="TaskEdit" text="Квест" tap="{{ navigateToTaskEditPage }}"/>
+            </FlexboxLayout>
+        </StackLayout>
+
+        <StackLayout class="shape-outer-main">
+            <FlexboxLayout class="main shape-inner-main">
+                <TextField class="subtaskTitle" hint="Название подзадачи..." text="{{ subtaskTitle }}" returnPress="{{ setSubtaskTitle }}" />
+                <FlexboxLayout class="control-panel">
+                    <FlexboxLayout class="subtaskCompletion">
+                        <Label text="Выполнена: "/>
+                        <Switch checked="{{ subtaskCompletionStatus }}" />
+                    </FlexboxLayout>
+                    <Button class="deleteSubtask" text="Удалить подзадачу" tap="{{ deleteSubtask }}"/>
+                </FlexboxLayout>
+            </FlexboxLayout>
+        </StackLayout>
+    </StackLayout>
+</Page>

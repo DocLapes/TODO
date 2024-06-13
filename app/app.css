@@ -1,0 +1,94 @@
+﻿@import '@nativescript/theme/css/core.css';
+@import '@nativescript/theme/css/default.css';
+
+ActionBar
+{
+    height: 0;
+}
+
+Page
+{
+    background-color: black;
+    box-sizing: border-box;
+}
+
+.shape-outer-header
+{
+    width: 85%;
+    height: 10%;
+    margin: 20px 0 0 0;
+}
+
+.shape-inner-header
+{
+    clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+    border-color: white;
+    border-width: 5px;
+}
+
+.header
+{
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.header > *
+{
+    background-color: hsla(0, 0%, 90%, 0);
+    color: white;
+    font-size: 25px;
+    width: 50%;
+}
+
+.header > *:highlighted
+{
+    color: hsla(0, 0%, 50%, 1);
+}
+
+.header > .current
+{
+    text-decoration: underline;
+}
+
+.shape-outer-main
+{
+    width: 95%;
+}
+
+.shape-inner-main
+{
+    clip-path: polygon(14% 0, 86% 0, 100% 8%, 100% 100%, 0 100%, 0 8%);
+    border-color: white;
+    border-width: 5px;
+    height: 100%;
+    width: 100%;
+}
+
+.main
+{
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.main *
+{
+    font-size: 22px;
+    color: white;
+    background-color: hsla(0, 0%, 90%, 0);
+}
+
+.main *:highlighted
+{
+    color: hsla(0, 0%, 50%, 1);
+}
+
+.main > .create
+{
+    color: hsla(0, 0%, 76%, 1);
+    font-size: 40px;
+}
+.main > .create:highlighted
+{
+    color: hsla(0, 0%, 100%, 1);
+    font-size: 40px;
+}

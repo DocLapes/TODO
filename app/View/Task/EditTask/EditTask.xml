@@ -1,0 +1,34 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <StackLayout>
+        <StackLayout class="shape-outer-header">
+            <FlexboxLayout class="header shape-inner-header">
+                <Button class="Tasks" text="Квесты" tap="{{ gotoTasksList }}" />
+                <Button class="TaskEdit current" text="Квест" />
+            </FlexboxLayout>
+        </StackLayout>
+
+        <StackLayout class="shape-outer-main">
+            <FlexboxLayout class="main shape-inner-main">
+                <TextField class="TaskTitle" hint="Название задачи..." text="{{ taskTitle }}" returnPress="{{ setTaskTitle }}" />
+                <FlexboxLayout class="TaskDescription">
+                    <TextField width="70%" hint="Описание задачи..." text="{{ taskDescription }}" returnPress="{{ setTaskDescription }}" />
+                    <Button text="✕" tap="{{ deleteTask }}"/>
+                </FlexboxLayout>
+
+                <Button tap="{{ completeTask }}" text="{{ taskCompletionText }}" />
+
+                <FlexboxLayout class="subtasks">
+                    <Label text="Подзадачи" class="subtasks-label"/>
+                    <Button text="⊕" class="addNewSubtask" tap="{{ createNewSubtask }}"/>
+                    <StackLayout height="50%">
+                        <ListView height="100%" items="{{subtasks}}" itemTap="{{ editSubtask }}" separatorColor="transparent">
+                            <ListView.itemTemplate>
+                                <Label text="{{ title }}" />
+                            </ListView.itemTemplate>
+                        </ListView>
+                    </StackLayout>
+                </FlexboxLayout>
+            </FlexboxLayout>
+        </StackLayout>
+    </StackLayout>
+</Page>

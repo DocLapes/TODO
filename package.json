@@ -1,0 +1,23 @@
+{
+  "name": "TODO",
+  "main": "app/app.js",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@nativescript/core": "~8.6.0",
+    "@nativescript/theme": "~3.0.2",
+    "@nativescript/unit-test-runner": "^3.0.4",
+    "nativescript-sqlite": "^2.8.6"
+  },
+  "devDependencies": {
+    "@jsdevtools/coverage-istanbul-loader": "3.0.5",
+    "@nativescript/android": "8.6.2",
+    "@nativescript/webpack": "~5.0.18",
+    "karma": "6.4.2",
+    "karma-coverage": "2.2.1",
+    "karma-nativescript-launcher": "0.4.0",
+    "karma-qunit": "4.1.2",
+    "nyc": "15.1.0",
+    "qunit": "2.20.0"
+  }
+}

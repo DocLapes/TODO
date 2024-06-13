@@ -1,0 +1,47 @@
+TextField
+{
+    color: white;
+}
+
+.main
+{
+    padding: 0 14%;
+}
+
+.TaskTitle
+{
+    margin: 15 0;
+    font-size: 30px;
+}
+
+.TaskDescription
+{
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.completeTask
+{
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.subtaskDescription > TextField
+{
+    color: hsla(360, 0%, 77%, 1);
+}
+
+.subtasks
+{
+    flex-flow: column nowrap;
+}
+
+.subtasks-label
+{
+    align-self: center;
+}
+
+.addNewSubtask
+{
+    color: hsla(360, 0%, 77%, 1);
+}
